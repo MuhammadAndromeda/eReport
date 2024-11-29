@@ -95,6 +95,34 @@ if(!isset($_SESSION['login'])) {
             box-shadow: 0px 0px 10px 1px white;
         }
 
+        .navbar form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar form button{
+            width: 15vw;
+            padding: 10px 0;
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar form button:hover, .navbar form button:focus{
+            color: black;
+            background-color: white;
+            box-shadow: 0px 0px 10px 1px white;
+        }
+
         .navbar img{
             width: 5vw;
             height: auto;
@@ -187,7 +215,9 @@ if(!isset($_SESSION['login'])) {
         <div class="navbar">
             <a href="index.php">Report Saya</a>
             <img src="Logo-Gerindra.png" alt="logo GERINDRA">
-            <a href="#">Log Out</a>
+            <form action="auth/logout.php" method="post">
+                <button type="submit">Log Out</button>
+            </form>
         </div>
     </nav>
 
